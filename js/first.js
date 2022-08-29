@@ -19,7 +19,7 @@ const createScene = async () => {
         "fish.glb",
         scene,
         function (newMeshes) {
-            newMeshes[0].scaling = new BABYLON.Vector3(1, 1, 1);
+            newMeshes[0].scaling = new BABYLON.Vector3(4, 4, 4);
         }
     );
     //    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2,  1, -2, new BABYLON.Vector3(0, 0, 0));
