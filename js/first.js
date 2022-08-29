@@ -1,7 +1,8 @@
+
 // let engine;
 let sceneToRender;
 
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true, {});
 
 // const createDefaultEngine = function () {
