@@ -23,11 +23,7 @@ const createScene = async () => {
         }
     );
     //    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2,  1, -2, new BABYLON.Vector3(0, 0, 0));
-    // const camera1 = new BABYLON.FreeCamera(
-    //     "freeCamera",
-    //     new BABYLON.Vector3(0, 0, -10),
-    //     scene
-    // );
+   
 
     // camera1.attachControl(canvas, true);
     // camera1.lowerRadiusLimit = 8
@@ -67,25 +63,7 @@ const createScene = async () => {
     );
 
             
-    // const xrHelper = await scene.createDefaultXRExperienceAsync({
-    //     uiOptions: {
-    //         sessionMode: "immersive-ar",
-    //         referenceSpaceType: "local-floor"
-    //     },
-    //     optionalFeatures: true
-    // });
-    // if (!xrHelper.baseExperience) {
-    //     // XR support is unavailable.
-    //     console.log("WebXR support is unavailable");
-    // } else {
-    // //    // XR support is available; proceed.
-    // //     const supported = await WebXRSessionManager.IsSessionSupportedAsync('immersive-vr');
-    // //     if (supported) {
-    // //     // xr available, session supported
-    // //     const sessionManager = new WebXRSessionManager(scene);
-    // //     const xrCamera = new WebXRCamera("freeCamera", scene, sessionManager);
-    //     }
-
+    
         return scene;
   
 };
