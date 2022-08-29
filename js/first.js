@@ -61,27 +61,26 @@ const createScene = async () => {
   camera2.upperRadiusLimit = 10;
 
     var advancedTexture =
-          BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+    BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI();
     var button1 = BABYLON.GUI.Button.CreateSimpleButton("button1", "Move");
-    button1.top = "150px";
-    button1.color = "white";
-    button1.width = 0.2;
-    button1.height = 0.1;
-    button1.fontSize = 20;
-    button1.background = "green";
-    button1.cornerRadius = 40
-    button1.bottom= "50px"
+    button1.width = "100px";
+        button1.height = "30px"
+        button1.background = "white"
+        button1.verticalAlignment = 1;
+        button1.horizontalAlignment = 0;
+        button1.left = "130px"
+        button1.top = "-15px";
     button1.onPointerUpObservable.add(function () {
        scene.activeCamera = camera1
     });
     var button2 = BABYLON.GUI.Button.CreateSimpleButton("button2", "Don't move");
-    button2.top = "280px";
-    button2.color = "white";
-    button2.width = 0.2;
-    button2.height = 0.1;
-    button2.fontSize = 20;
-    button2.cornerRadius = 40
-    button2.background = "green";
+    button2.width = "100px";
+    button2.height = "30px"
+    button2.background = "white"
+    button2.verticalAlignment = 1;
+    button2.horizontalAlignment = 0;
+    button2.left = "15px";
+    button2.top = "-15px";
     button2.onPointerUpObservable.add(function () {
         scene.activeCamera = camera2
     });
