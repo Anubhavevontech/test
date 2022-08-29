@@ -48,15 +48,23 @@ const createScene = async () => {
 
 
 
-    const videoLayer = new BABYLON.Layer('videoLayer', null, scene, true);
-    const videoTexture = BABYLON
-        .VideoTexture
-        .CreateFromWebCam(
-            scene, (videoTexture) => {
-                videoTexture._invertY = false;
-                videoTexture
-                videoLayer.texture = videoTexture;
-            }, { maxWidth: canvas.width, maxHeight: canvas.height, facingMode: "environment" });
+    const layer = new BABYLON.Layer("layer", null, scene, true);
+    BABYLON.VideoTexture.CreateFromWebCam(
+        scene,
+        (videoTexture) => {
+            videoTexture.vScale = -1.0;
+            videoTexture.uScale =
+                ((canvas.width / canvas.height) *
+                    videoTexture.getSize().height) /
+                videoTexture.getSize().width;
+            layer.texture = videoTexture;
+        },
+        {
+            maxWidth: canvas.width,
+            maxHeight: canvas.height,
+            facingMode: "environment",
+        }
+    );
 
             
     // const xrHelper = await scene.createDefaultXRExperienceAsync({
